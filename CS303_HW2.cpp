@@ -1,22 +1,25 @@
-// CS303_HW2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include <iostream>
 #include "Single_Linked_List.h"
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    //Single_Linked_List test
+    Single_Linked_List<int> list;
+    string input;
+    list.push_back(10);
+    list.push_back(11);
+    list.push_back(5);
+    cout << list.pop_back() << " was removed from the end" << endl;
+    cout << list.pop_front() << " was removed from the front" << endl;
+    cout << "Enter a number to locate: ";
+    cin >> input;
+    cout << "Number was found at index " << list.find(stoi(input));
+
+
+
+    //Q2::Write a C++ program to implement a stack of integers using a vector with push and pop operations.
 
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
