@@ -18,12 +18,15 @@
     <ClCompile Include="CS303_HW2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Single_Linked_List.cpp">
+    <ClCompile Include="Stack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Single_Linked_List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

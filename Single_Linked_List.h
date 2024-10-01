@@ -62,7 +62,7 @@ Single_Linked_List<Item_Type>::~Single_Linked_List() {
 template<typename Item_Type>
 void Single_Linked_List<Item_Type>::push_front(const Item_Type& item) {
 
-	Node* new_head = new Node(item);
+	Node<Item_Type>* new_head = new Node<Item_Type>(item);
 
 	//If the linked list is empty, head and tail is set to new_head
 	//else, set new_head next to the current head 
@@ -207,8 +207,8 @@ void Single_Linked_List<Item_Type>::insert(size_t index, const Item_Type& item) 
 	//If the given index falls within the scope of the list, we must iterate through the list until we reach the node
 	//before the given index.
 	else {
-		Node* new_node = new Node(item);	//item to be added
-		Node* temp = head;
+		Node<Item_Type>* new_node = new Node<Item_Type>(item);	//item to be added
+		Node<Item_Type>* temp = head;
 		for (size_t i = 0; i < index - 1; i++) {
 			temp = temp->next;
 		}
@@ -235,12 +235,12 @@ bool Single_Linked_List<Item_Type>::remove(size_t index) {
 	}
 	else {
 		//Iterate through the list until we reach the index before the one we want to remove.
-		Node* temp = head;
+		Node<Item_Type>* temp = head;
 		for (size_t i = 0; i < index - 1; i++) {
 			temp = temp->next;
 		}
 		//Set node to_remove, if this node is the tail, set temp to be the new tail.
-		Node* to_remove = temp->next;
+		Node<Item_Type>* to_remove = temp->next;
 		if (to_remove == tail) {
 			tail = temp;
 		}
